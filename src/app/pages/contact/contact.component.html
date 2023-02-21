@@ -1,0 +1,56 @@
+<div class="contact">
+  <form class="contact-form"
+        (submit)="submit()"
+  >
+    <h1>Contact form</h1>
+    <div class="form-control">
+      <label class="form-control__label">
+        <span class="form-control__name">Name *</span>
+        <input type="text" class="form-control__input" formControlName="name" autofocus>
+      </label>
+    </div>
+    <div class="form-control">
+      <label class="form-control__label">
+        <span class="form-control__name">Email *</span>
+        <input type="text" class="form-control__input" formControlName="email">
+      </label>
+    </div>
+    <div class="form-control">
+      <label class="form-control__label">
+        <span class="form-control__name">Phone</span>
+        <input type="text" class="form-control__input" formControlName="phone">
+      </label>
+    </div>
+    <div class="form-control">
+      <label class="form-control__label">
+        <span class="form-control__name">Type of request</span>
+        <select class="form-control__select" formControlName="type">
+          <option value="general">General</option>
+          <option value="sales">Sales</option>
+          <option value="service">Service</option>
+        </select>
+      </label>
+    </div>
+    <div class="form-control">
+      <label class="form-control__label">
+        <span class="form-control__name">Message</span>
+        <textarea cols="30" rows="5" formControlName="text"></textarea>
+      </label>
+    </div>
+    <div class="form-control form-control_checkbox">
+      <label class="form-control__label">
+        <input type="checkbox" class="form-control__input" formControlName="accept">
+        <span class="form-control__name">I accept the Terms & Conditions</span>
+      </label>
+    </div>
+
+    <div class="contact-form__buttons">
+      <button class="button button_secondary">Reset</button>
+      <button class="button button_primary">Send</button>
+    </div>
+  </form>
+
+  <div class="contact-sent">
+    <p>Thank you for contact us!</p>
+  </div>
+</div>

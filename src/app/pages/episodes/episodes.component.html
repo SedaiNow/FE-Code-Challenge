@@ -1,0 +1,22 @@
+<div class="episodes">
+  <div class="container">
+    <div class="page-top">
+      <h1 class="page-top__title">Episodes</h1>
+      <div class="page-top__actions"></div>
+    </div>
+
+    <ul class="episodes__list">
+      <li class="episodes__item" *ngFor="let episode of episodes">
+        <div class="episodes__item-name">episode.name</div>
+        <div class="episodes__item-row">
+          <span class="episodes__item-label">Episode ID</span> episode.episode
+        </div>
+        <div class="episodes__item-row">
+          <span class="episodes__item-label">Characters amount: </span> episode.characters.length
+        </div>
+      </li>
+    </ul>
+
+    <div class="page-bottom"></div>
+  </div>
+</div>

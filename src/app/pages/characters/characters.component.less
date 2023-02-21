@@ -1,0 +1,74 @@
+@import 'all';
+
+.characters {
+  padding: 15px;
+
+  &__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  &__item {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background-color: darkslategray;
+    color: @color-primary-white;
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      &-wrapper {
+        height: 250px;
+      }
+    }
+
+    &-label {
+      font-weight: bold;
+    }
+
+    &-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 15px;
+    }
+
+    &-gender {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      border-bottom-left-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      color: black;
+
+      &.male {
+        background-color: cornflowerblue;
+        color: white;
+        font-size: 25px;
+      }
+
+      &.female {
+        background-color: pink;
+        color: white;
+        font-size: 25px;
+      }
+    }
+
+  }
+}

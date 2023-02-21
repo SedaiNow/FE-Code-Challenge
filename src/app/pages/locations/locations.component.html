@@ -1,0 +1,37 @@
+<div class="locations">
+  <div class="container">
+    <div class="page-top">
+      <h1 class="page-top__title">Locations</h1>
+      <div class="page-top__actions">
+        <app-pagination
+          [current]="page"
+          [max]="maxPage"
+          (change)="pageChangeHandler($event)"
+        ></app-pagination>
+      </div>
+    </div>
+
+    <ul class="locations__list">
+      <li class="locations__item" *ngFor="let location of locations">
+        <div class="locations__item-name">Location</div>
+        <div class="locations__item-row">
+          <span class="locations__item-label">Type:</span> {{ location }}
+        </div>
+        <div class="locations__item-row">
+          <span class="locations__item-label">Dimension:</span> {{ location.dimension }}
+        </div>
+        <div class="locations__item-row">
+          <span class="locations__item-label">Residents count:</span> {{ location.residents }}
+        </div>
+      </li>
+    </ul>
+
+    <div class="page-bottom">
+      <app-pagination
+        [current]="page"
+        [max]="maxPage"
+        (change)="pageChangeHandler($event)"
+      ></app-pagination>
+    </div>
+  </div>
+</div>

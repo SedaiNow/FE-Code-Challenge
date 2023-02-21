@@ -1,0 +1,55 @@
+<div class="characters">
+  <div class="container">
+    <div class="page-top">
+      <h1 class="page-top__title">Characters</h1>
+      <div class="page-top__actions">
+        <app-pagination
+          [current]="page"
+          [max]="maxPage"
+          (change)="pageChangeHandler($event)"
+        ></app-pagination>
+      </div>
+    </div>
+
+    <ul class="characters__list">
+      <li class="characters__item" *ngFor="let char of characters">
+        <div class="characters__item-img-wrapper">
+          <img src="char.image" [alt]="char.name" class="characters__item-img">
+        </div>
+        <div class="characters__item-content">
+          <div class="characters__item-row">
+            <span class="characters__item-label">Name:</span> {{ char.name }}
+          </div>
+          <div class="characters__item-row">
+            <span class="characters__item-label">Status:</span> {{ char.status }}
+          </div>
+          <div class="characters__item-row">
+            <span class="characters__item-label">Species:</span> {{ char.species }}
+          </div>
+          <div class="characters__item-row">
+            <span class="characters__item-label">Gender:</span> {{ char.gender }}
+          </div>
+          <div class="characters__item-row">
+            <span class="characters__item-label">Origin:</span> {{ char.origin.name }}
+          </div>
+          <div class="characters__item-row">
+            <span class="characters__item-label">Location:</span> {{ char.location.name }}
+          </div>
+          <div class="characters__item-row">Participate in {{ char.episode.length }} episodes</div>
+        </div>
+        <div class="characters__item-gender"
+             [ngClass]="getClassNameByGender(char)"
+             [title]="char.gender"
+        >{{ getGenderIcon(char) }}</div>
+      </li>
+    </ul>
+
+    <div class="page-bottom">
+      <app-pagination
+        [current]="page"
+        [max]="maxPage"
+        (change)="pageChangeHandler($event)"
+      ></app-pagination>
+    </div>
+  </div>
+</div>
