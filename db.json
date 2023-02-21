@@ -1,0 +1,99 @@
+{
+  "orders": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "customerName": "Customer 1",
+      "products": [
+        {
+          "id": 3,
+          "title": "Product 3",
+          "price": 10.5,
+          "count": 3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "customerId": 1,
+      "customerName": "Customer 1",
+      "products": [
+        {
+          "id": 21,
+          "title": "Product 21",
+          "price": 98.44,
+          "count": 4
+        },
+        {
+          "id": 22,
+          "title": "Product 22",
+          "price": 153,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "customerId": 2,
+      "customerName": "Customer 2",
+      "products": [
+        {
+          "id": 21,
+          "title": "Product 21",
+          "price": 103.5,
+          "count": 4
+        },
+        {
+          "id": 22,
+          "title": "Product 22",
+          "price": 110.5,
+          "count": 1
+        },
+        {
+          "id": 23,
+          "title": "Product 23",
+          "price": 111.5,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "customerId": 3,
+      "customerName": "Customer 3",
+      "products": [
+        {
+          "id": 21,
+          "title": "Product 21",
+          "price": 103.5,
+          "count": 1
+        },
+        {
+          "id": 22,
+          "title": "Product 25",
+          "price": 56.12,
+          "count": 10
+        },
+        {
+          "id": 64,
+          "title": "Product 64",
+          "price": 332.1,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "customerId": 2,
+      "customerName": "Customer 2",
+      "products": [
+        {
+          "id": 21,
+          "title": "Product 21",
+          "price": 103.5,
+          "count": 1
+        }
+      ]
+    }
+  ]
+}
